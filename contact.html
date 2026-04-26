@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Asian Association for Algorithms and Computation</title>
+
+  <style>
+    :root {
+      --blue: #6795e6;
+      --link: #6b9af2;
+      --text: #444;
+      --muted: #777;
+      --line: #e8e8e8;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .site-header {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+
+    .header-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      margin: 0;
+      font-weight: 300;
+      font-size: 29px;
+    }
+
+    .site-title a { color: var(--blue); }
+
+    .search-icon {
+      color: #777;
+      border-left: 1px solid #ddd;
+      padding-left: 18px;
+      font-size: 20px;
+    }
+
+    .main-nav {
+      border-bottom: 1px solid #eee;
+    }
+
+    .main-nav ul {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .main-nav li + li::before {
+      content: "|";
+      margin: 0 22px;
+      color: #ccc;
+    }
+
+    .main-nav a {
+      padding: 18px 0;
+      display: block;
+      color: #707070;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .main-nav a.active,
+    .main-nav a:hover {
+      color: var(--blue);
+    }
+
+    .page-title-bar {
+      background: var(--blue);
+      color: white;
+    }
+
+    .page-title-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 20px;
+    }
+
+    .page-title-inner h2 {
+      margin: 0;
+      font-weight: 300;
+      font-size: 29px;
+    }
+
+    .content-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 92px 20px 80px;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 48px;
+    }
+
+    aside {
+      border-left: 1px solid var(--line);
+      padding-left: 28px;
+    }
+
+    .search-box {
+      display: flex;
+    }
+
+    .search-box input {
+      flex: 1;
+      height: 42px;
+      border: 1px solid #ddd;
+      border-right: none;
+      padding: 0 13px;
+    }
+
+    .search-box button {
+      width: 58px;
+      border: 1px solid #ddd;
+      background: #eee;
+      cursor: pointer;
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      color: #888;
+      padding: 28px 20px;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <h1 class="site-title">
+      <a href="index.html">Asian Association for Algorithms and Computation</a>
+    </h1>
+    <div class="search-icon">⌕</div>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">General Information</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="annual.html">Annual Meetings</a></li>
+    <li><a href="membership.html">Membership</a></li>
+    <li><a href="board_members.html">Board Members</a></li>
+    <li><a class="active" href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="page-title-bar">
+  <div class="page-title-inner">
+    <h2>Contact</h2>
+  </div>
+</section>
+
+<div class="content-wrap">
+
+  <main>
+    <p>
+      Email: <a href="mailto:heekap@gmail.com">heekap@gmail.com</a>
+    </p>
+  </main>
+
+  <aside>
+    <div class="search-box">
+      <input type="text" placeholder="Search ..." />
+      <button>🔍</button>
+    </div>
+  </aside>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    © Asian Association for Algorithms and Computation
+  </div>
+</footer>
+
+</body>
+</html>
