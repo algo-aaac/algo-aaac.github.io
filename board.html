@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Board Members - Asian Association for Algorithms and Computation</title>
+  <style>
+    :root {
+      --blue: #6795e6;
+      --link: #6b9af2;
+      --text: #444;
+      --muted: #777;
+      --line: #e8e8e8;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .site-header {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+
+    .header-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .site-title {
+      margin: 0;
+      font-weight: 300;
+      font-size: 29px;
+      letter-spacing: 0.2px;
+    }
+
+    .site-title a { color: var(--blue); }
+
+    .search-icon {
+      color: #777;
+      border-left: 1px solid #ddd;
+      padding-left: 18px;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .main-nav {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+
+    .main-nav ul {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+
+    .main-nav li { display: flex; align-items: center; }
+
+    .main-nav li + li::before {
+      content: "|";
+      color: #cfcfcf;
+      margin: 0 22px;
+      font-weight: 300;
+    }
+
+    .main-nav a {
+      display: block;
+      padding: 18px 0;
+      color: #707070;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.2px;
+    }
+
+    .main-nav a.active,
+    .main-nav a:hover {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .page-title-bar {
+      background: var(--blue);
+      color: white;
+    }
+
+    .page-title-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 20px;
+    }
+
+    .page-title-inner h2 {
+      margin: 0;
+      font-weight: 300;
+      font-size: 29px;
+      letter-spacing: 0.2px;
+    }
+
+    .content-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 92px 20px 80px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    main { min-width: 0; }
+
+    p { margin: 0 0 20px; }
+
+    h3 {
+      margin: 28px 0 4px;
+      font-size: 16px;
+      line-height: 1.35;
+      color: #444;
+      font-weight: 700;
+    }
+
+    .member-list {
+      margin: 8px 0 28px;
+      padding-left: 21px;
+    }
+
+    .member-list li {
+      margin: 7px 0;
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      color: #888;
+      padding: 28px 20px;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    @media (max-width: 850px) {
+      .header-inner { align-items: flex-start; }
+      .site-title { font-size: 24px; }
+      .main-nav ul { justify-content: flex-start; }
+      .main-nav li + li::before { margin: 0 12px; }
+      .content-wrap {
+        grid-template-columns: 1fr;
+        padding-top: 48px;
+        gap: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">
+        <a href="index.html">Asian Association for Algorithms and Computation</a>
+      </h1>
+      <div class="search-icon" aria-hidden="true">⌕</div>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">General Information</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="annual.html">Annual Meetings</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a class="active" href="board_members.html">Board Members</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-title-bar">
+    <div class="page-title-inner">
+      <h2>Board Members</h2>
+    </div>
+  </section>
+
+  <div class="content-wrap">
+    <main>
+      <h3>Current Board Members.</h3>
+      <ul class="member-list">
+        <li><a href="http://tcs.postech.ac.kr/~heekap">Hee-Kap Ahn</a> (Pohang University of Science and Technology (POSTECH))</li>
+        <li><a href="http://algeo.kyonggi.ac.kr">Sang Won Bae</a> (Kyonggi University)</li>
+        <li><a href="https://www.ee.ntu.edu.tw/profile1.php?id=100129">Ho-Lin Chen</a> (National Taiwan University)</li>
+        <li><a href="http://www.cse.ust.hk/faculty/scheng">Siu-Wing Cheng</a> (The Hong Kong University of Science and Technology, <strong>Chair</strong>)</li>
+        <li><a href="http://acolab.ie.nthu.edu.tw/">Chung-Shou Liao</a> (National Taiwan University)</li>
+        <li><a href="http://itcs.shufe.edu.cn/pinyan/">Pinyan Lu</a> (Shanghai University of Finance and Economics)</li>
+        <li><a href="http://isa.hanyang.ac.kr">Heejin Park</a> (Hanyang University)</li>
+        <li><a href="http://www-imai.is.s.u-tokyo.ac.jp/~sada/">Kunihiko Sadakane</a> (The University of Tokyo)</li>
+        <li><a href="http://www.carch.ac.cn/~xmsun/xmsun.htm">Xiaoming Sun</a> (Chinese Academy of Sciences)</li>
+        <li><a href="http://www.dais.is.tohoku.ac.jp/take/">Takehiro Ito</a> (Tohoku University)</li>
+        <li><a href="http://www.jaist.ac.jp/~uehara/index-e.html">Ryuhei Uehara</a> (Japan Advanced Institute of Science and Technology (JAIST))</li>
+        <li><a href="http://www.cs.zju.edu.cn/people/zgc">Guochuan Zhang</a> (Zhejiang University)</li>
+        <li><a href="http://www.cse.cuhk.edu.hk/~syzhang">Shengyu Zhang</a> (The Chinese University of Hong Kong)</li>
+      </ul>
+
+      <h3>Honorary Board Members.</h3>
+      <ul class="member-list">
+        <li>Francis Chin (Hang Seng Management College)</li>
+        <li>Kazuo Iwama (Kyoto University)</li>
+        <li>DT Lee (Academia Sinica)</li>
+        <li>Kunsoo Park (Seoul National University)</li>
+      </ul>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      © Asian Association for Algorithms and Computation
+    </div>
+  </footer>
+</body>
+</html>
