@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+html = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -138,18 +140,12 @@
       max-width: var(--max);
       margin: 0 auto;
       padding: 92px 20px 80px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 320px;
-      gap: 48px;
+      display: block;
     }
 
     main {
+      max-width: 760px;
       min-width: 0;
-    }
-
-    aside {
-      border-left: 1px solid var(--line);
-      padding-left: 32px;
     }
 
     p {
@@ -191,51 +187,6 @@
       margin: 3px 0;
     }
 
-    .search-box {
-      display: flex;
-      width: 100%;
-      margin-bottom: 34px;
-    }
-
-    .search-box input {
-      flex: 1;
-      height: 42px;
-      border: 1px solid #ddd;
-      border-right: none;
-      padding: 0 13px;
-      color: #999;
-      font-size: 15px;
-      outline: none;
-    }
-
-    .search-box button {
-      width: 58px;
-      height: 42px;
-      border: 1px solid #ddd;
-      background: #eee;
-      color: #777;
-      font-size: 19px;
-      cursor: pointer;
-    }
-
-    .side-block {
-      margin-top: 22px;
-    }
-
-    .side-block h4 {
-      margin: 0 0 10px;
-      font-size: 14px;
-      color: #555;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .side-block ul {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
     footer {
       border-top: 1px solid #eee;
       color: #888;
@@ -266,16 +217,11 @@
       }
 
       .content-wrap {
-        grid-template-columns: 1fr;
         padding-top: 48px;
-        gap: 36px;
       }
 
-      aside {
-        border-left: none;
-        border-top: 1px solid var(--line);
-        padding-left: 0;
-        padding-top: 28px;
+      main {
+        max-width: 100%;
       }
     }
   </style>
@@ -358,24 +304,9 @@
       </ul>
 
       <p>
-        For details, see <a href="http://asia-algo-comp.org/index.php/annual-meetings/">Annual Meetings.</a>
+        For details, see <a href="annual.html">Annual Meetings.</a>
       </p>
     </main>
-
-    <aside>
-      <form class="search-box" role="search">
-        <input type="search" placeholder="Search ..." />
-        <button type="submit" aria-label="Search">⌕</button>
-      </form>
-
-      <div class="side-block" id="news">
-        <h4>News</h4>
-        <ul>
-          <li>AAAC 2026 will be held in Qingdao, China.</li>
-          <li>Abstract submission is open through EasyChair.</li>
-        </ul>
-      </div>
-    </aside>
   </div>
 
   <footer>
@@ -385,3 +316,7 @@
   </footer>
 </body>
 </html>
+"""
+
+Path("/mnt/data/index.html").write_text(html, encoding="utf-8")
+"/mnt/data/index.html"
