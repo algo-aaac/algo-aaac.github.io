@@ -1,109 +1,387 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AAAC 2026</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asian Association for Algorithms and Computation</title>
+  <meta name="description" content="Asian Association for Algorithms and Computation" />
+  <style>
+    :root {
+      --blue: #6795e6;
+      --link: #6b9af2;
+      --text: #444;
+      --muted: #777;
+      --line: #e8e8e8;
+      --light: #f6f6f6;
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .site-header {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+
+    .header-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .site-title {
+      margin: 0;
+      font-weight: 300;
+      font-size: 29px;
+      letter-spacing: 0.2px;
+    }
+
+    .site-title a {
+      color: var(--blue);
+    }
+
+    .search-icon {
+      color: #777;
+      border-left: 1px solid #ddd;
+      padding-left: 18px;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .main-nav {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+
+    .main-nav ul {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+
+    .main-nav li {
+      display: flex;
+      align-items: center;
+    }
+
+    .main-nav li + li::before {
+      content: "|";
+      color: #cfcfcf;
+      margin: 0 22px;
+      font-weight: 300;
+    }
+
+    .main-nav a {
+      display: block;
+      padding: 18px 0;
+      color: #707070;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.2px;
+    }
+
+    .main-nav a.active,
+    .main-nav a:hover {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .page-title-bar {
+      background: var(--blue);
+      color: white;
+    }
+
+    .page-title-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 20px;
+    }
+
+    .page-title-inner h2 {
+      margin: 0;
+      font-weight: 300;
+      font-size: 29px;
+      letter-spacing: 0.2px;
+    }
+
+    .content-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 92px 20px 80px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 48px;
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    aside {
+      border-left: 1px solid var(--line);
+      padding-left: 32px;
+    }
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      margin: 28px 0 4px;
+      font-size: 16px;
+      line-height: 1.35;
+      color: #444;
+      font-weight: 700;
+    }
+
+    .underline {
+      color: #666;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      line-height: 1.1;
+    }
+
+    .plain-list {
+      margin: 0 0 24px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .plain-list li {
+      margin: 1px 0;
+    }
+
+    .speaker-list {
+      margin: 0 0 24px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .speaker-list li {
+      margin: 3px 0;
+    }
+
+    .search-box {
+      display: flex;
+      width: 100%;
+      margin-bottom: 34px;
+    }
+
+    .search-box input {
+      flex: 1;
+      height: 42px;
+      border: 1px solid #ddd;
+      border-right: none;
+      padding: 0 13px;
+      color: #999;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .search-box button {
+      width: 58px;
+      height: 42px;
+      border: 1px solid #ddd;
+      background: #eee;
+      color: #777;
+      font-size: 19px;
+      cursor: pointer;
+    }
+
+    .side-block {
+      margin-top: 22px;
+    }
+
+    .side-block h4 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .side-block ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      color: #888;
+      padding: 28px 20px;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    @media (max-width: 850px) {
+      .header-inner {
+        align-items: flex-start;
+      }
+
+      .site-title {
+        font-size: 24px;
+      }
+
+      .main-nav ul {
+        justify-content: flex-start;
+      }
+
+      .main-nav li + li::before {
+        margin: 0 12px;
+      }
+
+      .content-wrap {
+        grid-template-columns: 1fr;
+        padding-top: 48px;
+        gap: 36px;
+      }
+
+      aside {
+        border-left: none;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">
+        <a href="index.html">Asian Association for Algorithms and Computation</a>
+      </h1>
+      <div class="search-icon" aria-hidden="true">⌕</div>
+    </div>
+  </header>
 
-<h2>AAAC 2026</h2>
+  <nav class="main-nav" aria-label="Main navigation">
+    <ul>
+      <li><a class="active" href="index.html">General Information</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#annual-meetings">Annual Meetings</a></li>
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="#board-members">Board Members</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<p>
-The 17th Annual Meeting of Asian Association for Algorithms and Computation (AAAC) will take place at the Ocean University of China, <strong>Qingdao, China</strong> on <strong>May 23-24, 2026</strong>.
-</p>
+  <section class="page-title-bar">
+    <div class="page-title-inner">
+      <h2>General Information</h2>
+    </div>
+  </section>
 
-<p>
-We invite submissions of abstracts presenting original research or surveys of existing results in theoretical computer science.
-</p>
+  <div class="content-wrap">
+    <main>
+      <p>
+        The 17th Annual Meeting of Asian Association for Algorithms and Computation (AAAC) will take place at the Ocean University of China, <strong>Qingdao, China</strong> on <strong>May 23-24</strong>, 2026. We invite submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. The meeting will be held in person, and at least one author of each accepted submission is required to register and present the talk on-site. AAAC was founded in 2007 and its main aim is to promote collaborations in theoretical computer science within the region.
+      </p>
 
-<p>
-The meeting will be held in person, and at least one author of each accepted submission is required to register and present the talk on-site.
-</p>
+      <p>
+        Website: <a href="https://math.ouc.edu.cn/aaac2026/">https://math.ouc.edu.cn/aaac2026/</a>
+      </p>
 
-<p>
-AAAC was founded in 2007 and aims to promote collaborations in theoretical computer science within the region.
-</p>
+      <h3>Best student presentation award</h3>
+      <div class="underline">=================</div>
+      <p>
+        The Best Student Presentation will be awarded. A paper presentation is eligible for the Best Student Presentation if the author who presents the paper is a full-time student. Best student presentation award will be selected at the meeting by AAAC board members.
+      </p>
 
-<p>
-Website: <a href="https://math.ouc.edu.cn/aaac2026/">https://math.ouc.edu.cn/aaac2026/</a>
-</p>
+      <h3>Important Dates</h3>
+      <div class="underline">=================</div>
+      <ul class="plain-list">
+        <li>First Call for Abstracts: January 2 (Fri), 2026 (AoE)</li>
+        <li>Submission due: February 20 (Fri), 2026 (AoE)</li>
+        <li>Notification: March 27 (Fri), 2026 (AoE)</li>
+        <li>Camera-ready version due: April 10 (Fri), 2026 (AoE)</li>
+        <li>Early Registration due: April 17 (Fri), 2026 (AoE)</li>
+        <li>Conference Dates: May 23(Sat)-24(Sun), 2026</li>
+      </ul>
 
-<hr>
+      <h3>Topics of Interest</h3>
+      <div class="underline">=================</div>
+      <p>
+        All areas of theoretical computer science, especially design and analysis of algorithms and complexity theory.
+      </p>
 
-<h3>Best Student Presentation Award</h3>
-<p>
-The Best Student Presentation will be awarded. A presentation is eligible if the presenter is a full-time student.
-</p>
+      <h3>Submission Details</h3>
+      <div class="underline">=================</div>
+      <p>
+        Authors are invited to submit one-page (A4) abstracts (in pdf format) that can be based on original results or surveys of existing results. Informal working notes containing all accepted abstracts will be distributed to conference participants. This distribution will not constitute prior publication and does not preclude future submissions of the work to journals or conferences.
+      </p>
+      <p>
+        All submissions should be made electronically through the EasyChair Conference System:<br />
+        <a href="https://easychair.org/conferences?conf=aaac2026">https://easychair.org/conferences?conf=aaac2026</a>
+      </p>
 
-<hr>
+      <h3>Invited Speakers</h3>
+      <div class="underline">================</div>
+      <ul class="speaker-list">
+        <li>Donglei Du, University of New Brunswick</li>
+        <li>Ken-ichi Kawarabayashi, National Institute of Informatics</li>
+      </ul>
 
-<h3>Important Dates</h3>
-<ul>
-  <li>First Call: Jan 2, 2026</li>
-  <li>Submission Due: Feb 20, 2026</li>
-  <li>Notification: Mar 27, 2026</li>
-  <li>Camera-ready: Apr 10, 2026</li>
-  <li>Early Registration: Apr 17, 2026</li>
-  <li>Conference: May 23-24, 2026</li>
-</ul>
+      <p>
+        For details, see <a href="http://asia-algo-comp.org/index.php/annual-meetings/">Annual Meetings.</a>
+      </p>
+    </main>
 
-<hr>
+    <aside>
+      <form class="search-box" role="search">
+        <input type="search" placeholder="Search ..." />
+        <button type="submit" aria-label="Search">⌕</button>
+      </form>
 
-<h3>Topics of Interest</h3>
-<p>
-All areas of theoretical computer science, especially algorithms and complexity theory.
-</p>
+      <div class="side-block" id="news">
+        <h4>News</h4>
+        <ul>
+          <li>AAAC 2026 will be held in Qingdao, China.</li>
+          <li>Abstract submission is open through EasyChair.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
 
-<hr>
-
-<h3>Submission Details</h3>
-<p>
-Submit one-page (A4) abstracts (PDF) via EasyChair:
-</p>
-
-<p>
-<a href="https://easychair.org/conferences?conf=aaac2026">
-https://easychair.org/conferences?conf=aaac2026
-</a>
-</p>
-
-<hr>
-
-<h3>Invited Speakers</h3>
-<ul>
-  <li>Donglei Du (University of New Brunswick)</li>
-  <li>Ken-ichi Kawarabayashi (National Institute of Informatics)</li>
-</ul>
-
-<p>
-More info:
-<a href="http://asia-algo-comp.org/index.php/annual-meetings/">
-Annual Meetings
-</a>
-</p>
-
+  <footer>
+    <div class="footer-inner">
+      © Asian Association for Algorithms and Computation
+    </div>
+  </footer>
 </body>
-</html><!--
-<a href="/aaac2024/aaac2024cfp.htm">Call-for-Papers</a>
-<a href="/aaac2024/aaaccfp.pdf">Call-for-Papers in PDF</a>
--->
-
-<!--
-<strong>Registration</strong>
-=================
-Click <a href="https://cs.kwansei.ac.jp/~tokuyama/AAACregistration.html">Registration page</a> for registration link and information.
-Early registration fee: (By April 27 (Wed), 2024: 20,000JPY for regular, 10,000JPY for students)
-Registration fee includes banquet and coffee break.
-Banquet: At <a href="https://www.nakanoshima-social-eat-awake.jp/">Nakanoshima Social Eat Awake restaurant</a> on May 31 (Fri).
--->
-
-<!--<strong>Keynote Speakers</strong>-->
-<strong>Invited Speakers</strong>
-================
-Donglei Du, University of New Brunswick
-Ken-ichi Kawarabayashi, National Institute of Informatics
-<!--
-<a href="https://pub.ista.ac.at/~edels/"> Herbert Edelsbrunner </a> (ISTA)
-<a href="https://researchmap.jp/shuichi.hirahara/?lang=en">Shuichi Hirahara </a> (NII)
--->
-<span style="color: #000000;">For details, see</span> <a style="color: #6897e5;" href="http://asia-algo-comp.org/index.php/annual-meetings/">Annual Meetings.</a>
+</html>
