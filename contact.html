@@ -64,8 +64,9 @@
 
     .main-nav {
       border-bottom: 1px solid #eee;
+      background: #fff;
     }
-
+    
     .main-nav ul {
       max-width: var(--max);
       margin: 0 auto;
@@ -73,26 +74,36 @@
       list-style: none;
       display: flex;
       justify-content: center;
+      align-items: center;
+      gap: 0;
       flex-wrap: wrap;
     }
-
+    
+    .main-nav li {
+      display: flex;
+      align-items: center;
+    }
+    
     .main-nav li + li::before {
       content: "|";
+      color: #cfcfcf;
       margin: 0 22px;
-      color: #ccc;
+      font-weight: 300;
     }
-
+    
     .main-nav a {
-      padding: 18px 0;
       display: block;
+      padding: 18px 0;
       color: #707070;
       text-transform: uppercase;
       font-size: 13px;
+      letter-spacing: 0.2px;
     }
-
+    
     .main-nav a.active,
     .main-nav a:hover {
       color: var(--blue);
+      text-decoration: none;
     }
 
     .page-title-bar {
