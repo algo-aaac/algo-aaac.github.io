@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annual Meetings - Asian Association for Algorithms and Computation</title>
+  <style>
+    :root {
+      --blue: #6795e6;
+      --link: #6b9af2;
+      --text: #444;
+      --muted: #777;
+      --line: #e8e8e8;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .site-header {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+
+    .header-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .site-title {
+      margin: 0;
+      font-weight: 300;
+      font-size: 29px;
+      letter-spacing: 0.2px;
+    }
+
+    .site-title a { color: var(--blue); }
+
+    .search-icon {
+      color: #777;
+      border-left: 1px solid #ddd;
+      padding-left: 18px;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .main-nav {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+
+    .main-nav ul {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+
+    .main-nav li { display: flex; align-items: center; }
+
+    .main-nav li + li::before {
+      content: "|";
+      color: #cfcfcf;
+      margin: 0 22px;
+      font-weight: 300;
+    }
+
+    .main-nav a {
+      display: block;
+      padding: 18px 0;
+      color: #707070;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.2px;
+    }
+
+    .main-nav a.active,
+    .main-nav a:hover {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .page-title-bar {
+      background: var(--blue);
+      color: white;
+    }
+
+    .page-title-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 20px;
+    }
+
+    .page-title-inner h2 {
+      margin: 0;
+      font-weight: 300;
+      font-size: 29px;
+      letter-spacing: 0.2px;
+    }
+
+    .content-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 92px 20px 80px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    main { min-width: 0; }
+
+    .coming-soon {
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #777;
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: 0.4px;
+    }
+
+    .coming-soon p { margin: 0; }
+
+    
+
+    p { margin: 0 0 20px; }
+
+    h3 {
+      margin: 28px 0 4px;
+      font-size: 16px;
+      line-height: 1.35;
+      color: #444;
+      font-weight: 700;
+    }
+
+    .underline {
+      color: #666;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      line-height: 1.1;
+    }
+
+    .plain-list {
+      margin: 0 0 24px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .plain-list li { margin: 1px 0; }
+
+    .meeting-list {
+      margin: 8px 0 0;
+      padding-left: 21px;
+    }
+
+    .meeting-list li {
+      margin: 7px 0;
+    }
+
+    .search-box {
+      display: flex;
+      width: 100%;
+      margin-bottom: 34px;
+    }
+
+    .search-box input {
+      flex: 1;
+      height: 42px;
+      border: 1px solid #ddd;
+      border-right: none;
+      padding: 0 13px;
+      color: #999;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .search-box button {
+      width: 58px;
+      height: 42px;
+      border: 1px solid #ddd;
+      background: #eee;
+      color: #777;
+      font-size: 19px;
+      cursor: pointer;
+    }
+
+    .side-block { margin-top: 22px; }
+
+    .side-block h4 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .side-block ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      color: #888;
+      padding: 28px 20px;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    @media (max-width: 850px) {
+      .header-inner { align-items: flex-start; }
+      .site-title { font-size: 24px; }
+      .main-nav ul { justify-content: flex-start; }
+      .main-nav li + li::before { margin: 0 12px; }
+      .content-wrap {
+        grid-template-columns: 1fr;
+        padding-top: 48px;
+        gap: 36px;
+      }
+      aside {
+        border-left: none;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">
+        <a href="index.html">Asian Association for Algorithms and Computation</a>
+      </h1>
+      <div class="search-icon" aria-hidden="true">⌕</div>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">General Information</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a class="active" href="annual.html">Annual Meetings</a></li>
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="#board-members">Board Members</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-title-bar">
+    <div class="page-title-inner">
+      <h2>Annual Meetings</h2>
+    </div>
+  </section>
+
+  <div class="content-wrap">
+    <main>
+      <div class="coming-soon">
+        <p>Coming soon</p>
+      </div>
+    </main>
+
+    
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      © Asian Association for Algorithms and Computation
+    </div>
+  </footer>
+</body>
+</html>
