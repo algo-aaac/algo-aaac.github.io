@@ -128,16 +128,13 @@
       margin: 0 auto;
       padding: 92px 20px 80px;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 320px;
+      grid-template-columns: 1fr;
       gap: 48px;
     }
 
     main { min-width: 0; }
 
-    aside {
-      border-left: 1px solid var(--line);
-      padding-left: 32px;
-    }
+    
 
     p { margin: 0 0 20px; }
 
@@ -364,20 +361,7 @@
       </ul>
     </main>
 
-    <aside>
-      <form class="search-box" role="search">
-        <input type="search" placeholder="Search ..." />
-        <button type="submit" aria-label="Search">⌕</button>
-      </form>
-
-      <div class="side-block" id="news">
-        <h4>News</h4>
-        <ul>
-          <li>AAAC 2026 will be held in Qingdao, China.</li>
-          <li>Abstract submission is open through EasyChair.</li>
-        </ul>
-      </div>
-    </aside>
+    
   </div>
 
   <footer>
